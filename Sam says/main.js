@@ -20,9 +20,7 @@ for(var i=0; i < 5; i++ ) {
   arrayNCasuali.push(numeriCasuali);
 }
 console.log(arrayNCasuali);
-
-
+alert('Hai 30Sec per tenere bene in mente questi numeri ' + arrayNCasuali);
 setInterval(function() {
   parseInt(prompt('Bene adesso inserisci i numeri che hai visto prima'));
 }, 5000);
-alert('Hai 30Sec per tenere bene in mente questi numeri ' + arrayNCasuali);
