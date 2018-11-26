@@ -14,13 +14,18 @@ function getRandomNumber(min, max) {
 var arrayNCasuali = [];
 
 for(var i=0; i < 5; i++ ) {
-  var numeriCasuali = ' ';
-  numeriCasuali += getRandomNumber(0, 100);
+  numeriCasuali = getRandomNumber(0, 100);
   console.log(numeriCasuali);
   arrayNCasuali.push(numeriCasuali);
 }
 console.log(arrayNCasuali);
+var arrayNUtente = [];
 alert('Hai 30Sec per tenere bene in mente questi numeri ' + arrayNCasuali);
-setInterval(function() {
-  parseInt(prompt('Bene adesso inserisci i numeri che hai visto prima'));
-}, 5000);
+setTimeout(function() {
+  for(var i = 0; i < 5; i++){
+    var numeroUtente = parseInt(prompt('Bene adesso inserisci uno dei numeri casuali'));
+    arrayNUtente.push(numeroUtente);
+  }
+  console.log(arrayNUtente);
+}, 3000);
+console.log(arrayNUtente);
