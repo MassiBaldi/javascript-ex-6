@@ -19,13 +19,22 @@ for(var i=0; i < 5; i++ ) {
   arrayNCasuali.push(numeriCasuali);
 }
 console.log(arrayNCasuali);
+
 var arrayNUtente = [];
+
 alert('Hai 30Sec per tenere bene in mente questi numeri ' + arrayNCasuali);
+
 setTimeout(function() {
   for(var i = 0; i < 5; i++){
     var numeroUtente = parseInt(prompt('Bene adesso inserisci uno dei numeri casuali'));
-    arrayNUtente.push(numeroUtente);
+    if (arrayNCasuali.includes(numeroUtente)) {
+      arrayNUtente.push(numeroUtente);;
+    }
   }
   console.log(arrayNUtente);
+  if (arrayNUtente.length > 0) {
+    alert('Ti sei ricordato ' + arrayNUtente.length + 'numeri su: ' + arrayNCasuali.length);
+  } else {
+    alert('Non ti sei ricordato neanche un numero... RITENTA!');
+  }
 }, 3000);
-console.log(arrayNUtente);
